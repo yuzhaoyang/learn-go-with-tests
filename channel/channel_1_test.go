@@ -26,5 +26,7 @@ func TestChannel2(t *testing.T) {
 	go func() {
 		ch <- 1
 	}()
+
+	fmt.Println("element of ch: ", <-ch)
 	fmt.Println("element of ch: ", <-ch)
 }
