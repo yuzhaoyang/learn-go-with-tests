@@ -160,3 +160,24 @@ func TestSlice7(t *testing.T) {
 	fmt.Println("address:", out[0], out[1], out[2])
 
 }
+
+func TestSlice8(t *testing.T) {
+
+	s0 := &Student{"name0", 1}
+	s1 := &Student{"name1", 2}
+	s2 := &Student{"name2", 2}
+
+	in := []*Student{s0, s1, s2}
+
+	var out []*Student
+
+	for _, v := range in {
+
+		out = append(out, v)
+
+	}
+
+	fmt.Println("values:", *out[0], *out[1], *out[2])
+	fmt.Println("address:", out[0], out[1], out[2])
+
+}
